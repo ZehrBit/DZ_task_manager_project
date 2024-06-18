@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задачи</title>
+</head>
+<body>
+<div align="center">
+{% for task in tasks %}
+    <h2>
+        {{ task.title }}
+    </h2>
+    <p>
+        Опубликовано: {{ task.created_at }}<br>
+        Автор: {{ task.author }}
+    </p>
+    {{ task.note }}
+    <p>
+    Приоритет: {{ task.priority }}<br>
+    Статус: {{ task.status }}
+    </p>
+{% endfor %}
+</div>
+</body>
+</html>
